@@ -1,0 +1,116 @@
+{
+  "unitarias": [
+    {
+      "name": "com.example.finanzas.AmountParserRegressionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:04.316Z",
+      "time": "0.008"
+    },
+    {
+      "name": "com.example.finanzas.data.model.TransaccionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:04.352Z",
+      "time": "0.0"
+    },
+    {
+      "name": "com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:04.212Z",
+      "time": "0.05"
+    },
+    {
+      "name": "com.example.finanzas.ExampleUnitTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:04.325Z",
+      "time": "0.0"
+    },
+    {
+      "name": "com.example.finanzas.TransactionValidatorUnitTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:04.329Z",
+      "time": "0.021"
+    },
+    {
+      "name": "com.example.finanzas.ui.BudgetFormRegressionTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:07.675Z",
+      "time": "4.029"
+    },
+    {
+      "name": "com.example.finanzas.ui.TransactionFormConsumerTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:11.748Z",
+      "time": "3.291"
+    },
+    {
+      "name": "com.example.finanzas.util.CategoryVisualEquivalenceTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:15.056Z",
+      "time": "0.616"
+    },
+    {
+      "name": "com.example.finanzas.util.CurrencyConverterTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:04.265Z",
+      "time": "0.004"
+    },
+    {
+      "name": "com.example.finanzas.util.RecurringTransactionStoreTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:36:04.270Z",
+      "time": "0.044"
+    }
+  ],
+  "instrumentadas": [
+    {
+      "name": "com.example.finanzas.ExampleInstrumentedTest",
+      "tests": "23",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:44:45",
+      "time": "17.558"
+    }
+  ],
+  "instrumentadas-primer-intento": [
+    {
+      "name": "com.example.finanzas.ExampleInstrumentedTest",
+      "tests": "23",
+      "failures": "1",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-11T23:43:05",
+      "time": "18.284"
+    }
+  ]
+}

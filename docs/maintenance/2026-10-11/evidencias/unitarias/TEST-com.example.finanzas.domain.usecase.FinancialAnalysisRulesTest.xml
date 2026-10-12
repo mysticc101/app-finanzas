@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-11T23:36:04.212Z" time="0.05">
+  <testcase name="initialBalancesAreVisibleIncomeButNotRecurringForRealCase" classname="com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest" time="0.045"/>
+  <testcase name="oneExpenseWithIncomeKeepsProjectionPreliminaryAndNonAlarmist" classname="com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest" time="0.001"/>
+  <testcase name="initialBalanceTransactionIsNotTreatedAsRecurringMonthlyIncome" classname="com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest" time="0.001"/>
+  <testcase name="expenseWithoutIncomeOrInitialBalanceWarnsStrongly" classname="com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest" time="0.001"/>
+  <testcase name="initialBalanceWithoutExpensesIsStableAndPreliminary" classname="com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest" time="0.001"/>
+  <testcase name="initialBalanceWithOneExpenseDoesNotTreatMonthlyBalanceAsRealNegativeCash" classname="com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest" time="0.0"/>
+  </testsuite>

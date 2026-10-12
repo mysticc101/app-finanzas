@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="com.example.finanzas.TransactionValidatorUnitTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-10-11T23:36:04.329Z" time="0.021">
+  <testcase name="validator_invalidTime_shouldReturnInvalidTime" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="validator_missingCategoryForExpense_shouldReturnMissingCategory" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.001"/>
+  <testcase name="validator_unsupportedCurrency_shouldReturnInvalidCurrency" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="visualFactory_resolvesStandardStrategies" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.015"/>
+  <testcase name="validator_validForm_shouldPass" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="validator_nullDate_shouldReturnInvalidDate" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="validator_zeroOrNegativeAmount_shouldReturnInvalidAmount" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="amountParser_commaDecimal_shouldParseCorrectly" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.001"/>
+  <testcase name="amountParser_invalidInputs_shouldReturnDefaultValue" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="amountParser_withCurrencySymbolsAndSpaces_shouldSanitize" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.001"/>
+  <testcase name="amountParser_standardDotDecimal_shouldParseCorrectly" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="amountParser_thousandsWithCommaAndDecimalDot_shouldParseCorrectly" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="validator_transferDoesNotRequireCategory_shouldPass" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="validator_transferSameAccount_shouldReturnSameTransferAccount" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="visualFactory_dynamicStrategyRegistration_fulfillsOCP" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.001"/>
+  <testcase name="validator_customRecurrenceWithoutDaysMask_shouldReturnInvalidRecurrence" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="amountParser_parsePositiveAmount_shouldAlwaysBeNonNegative" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  <testcase name="amountParser_thousandsWithDotAndDecimalComma_shouldParseCorrectly" classname="com.example.finanzas.TransactionValidatorUnitTest" time="0.0"/>
+  </testsuite>

@@ -1,0 +1,151 @@
+{
+  "commit": "87b19419b31762d8541a3ae4ae2aca5a553aabe2",
+  "criterio": "Coincidencia exacta salvo normalizacion CRLF/LF de Git; sin cambios de codigo tras la validacion.",
+  "archivos": [
+    {
+      "archivo": "app/build.gradle.kts",
+      "sha256_validado": "7b3ae42acdc891ef9b1455a18c27ab1748051b5a54a024b75ab240cc88c182da",
+      "sha256_blob_git": "85f4e949f504d624f4970667e976d21b6719c2f3532bae8c3e69eb62090e4a8b"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/data/repository/TransactionRepository.kt",
+      "sha256_validado": "90dfff54fbe7d42ff4f3bf342b924efcdfacb97d1fc6cf4f8b7539f12816a411",
+      "sha256_blob_git": "75e930dcd82cdbba443c788e38938de90eda4832fe9aed533a82694040d79fea"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/ui/HomeFragment.java",
+      "sha256_validado": "16938128b0fdd1c39a2e94d05ab97342f8fcaddafc1b53af0d2d460084d0aa37",
+      "sha256_blob_git": "11c6ca3d70176186528fca2e69df6e39c1808720f2b6f8e17b8f34a5525d0351"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/ui/NuevaTransaccionFragment.java",
+      "sha256_validado": "0c165c6f21921a717d1dd705bf8a8a956773d05464864a7d971d037dc31c445a",
+      "sha256_blob_git": "225d7a918e8337b882ddc734d4d35143957974348bac15dff730e213fd1f66f8"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/ui/PresupuestoFragment.java",
+      "sha256_validado": "f23e56d5958e10ddb752595f46677fee71ecde64ac3766c5b030c9b96c351860",
+      "sha256_blob_git": "ff7479803861edac04b0dd168db4e0b0daabc4fec1a01ffbbdf915047f4d3264"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/CategoryVisuals.java",
+      "sha256_validado": "4ab2c89e629fc0f0b1b4f45ce149f985f9f4db7c295c2e876f1ec69132a8358d",
+      "sha256_blob_git": "4ab2c89e629fc0f0b1b4f45ce149f985f9f4db7c295c2e876f1ec69132a8358d"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/UiFormUtils.java",
+      "sha256_validado": "97ca13f228785419e4bd80d32da7c8448593e626fab18d4ea68799054e70743c",
+      "sha256_blob_git": "9b0f43c0e73b6ca02acc8bfa9d97d03f6307f69a57ff92788dc4307b67531300"
+    },
+    {
+      "archivo": "app/src/androidTest/java/com/example/finanzas/data/repository/TransactionRepositoryInstrumentedTest.kt",
+      "sha256_validado": "53092f587cb6a4f41781c7795ae7736f5732b2e34053767ff24d02abacb14bcb",
+      "sha256_blob_git": "ba6b9dcc7949635725db138955a1fcf2177e4a0ce67fd8e6388c591c1529dd02"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/data/repository/ITransactionRepository.java",
+      "sha256_validado": "de16f40afe2d16f9cbd74dc7ba13316144172089311937708a6fafbb544bf228",
+      "sha256_blob_git": "4531c43ac49c86602e181433ae2139efe83e5b0f3c2f5a7e38f80879c3445ba7"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/AmountParser.java",
+      "sha256_validado": "24d4fdd424b4fd04a1aad7b2205c1288faecc852764fe3733175aab735f8f152",
+      "sha256_blob_git": "24d4fdd424b4fd04a1aad7b2205c1288faecc852764fe3733175aab735f8f152"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/TimeValidator.java",
+      "sha256_validado": "37e20dd931f662d033dec816631ecb93fcc2773025dfb1caae1abe1a492717ed",
+      "sha256_blob_git": "37e20dd931f662d033dec816631ecb93fcc2773025dfb1caae1abe1a492717ed"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/TransactionFormValidator.java",
+      "sha256_validado": "7b3f47682073f8f8dead6b3870e68c215384bb9b3ffd15ccc368d342c1bc5d21",
+      "sha256_blob_git": "7b3f47682073f8f8dead6b3870e68c215384bb9b3ffd15ccc368d342c1bc5d21"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/BillsVisualStrategy.java",
+      "sha256_validado": "42b72b65ca5626a3d8cc34d8e1c3634292e591367afd280ad3ad3c9b8e807182",
+      "sha256_blob_git": "7507153fb5dd15c2f5be83f499a8fb1f55b28ffb7a8bb6613aa75e769eada29d"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/CategoryVisualFactory.java",
+      "sha256_validado": "d029e7b1c21e988c6a60203b0bfa3a85ef916f9c20a3353cd4df126b831fc210",
+      "sha256_blob_git": "92014ddf385ef35d145d53c35a0ee9fc362c45adb0021c033772606bf8163d01"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/CategoryVisualStrategy.java",
+      "sha256_validado": "2e230d7d2450bdbff14e5eec4bf5822d339f97baf2a92b851eb13ee6aa312f2a",
+      "sha256_blob_git": "057cd2b6a79cf7d65100f317e71a2191308a310c024804cc26a842c03389132e"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/DefaultCategoryVisualStrategy.java",
+      "sha256_validado": "43051b2eed6b905b80fd1878f6b15497b36cdf87971d31dd0eba0a2f4233856b",
+      "sha256_blob_git": "3f987a64858b37a06551a93d913d69e8f8c67f32f02d1a055306cb4834fed9c5"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/EntertainmentVisualStrategy.java",
+      "sha256_validado": "c677481ee6a689bf3e4c1e674e7ae845ee8c286770e4dc50f4460903db0b8c53",
+      "sha256_blob_git": "177b68925a5dbfb38f77d79d80740b6c6bf86f2998b139e794211621d5ac3325"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/FinanceVisualStrategy.java",
+      "sha256_validado": "5778e38766e139446053ec8556215f6597f0eb0dba5411ebce0e339a5dcdf45f",
+      "sha256_blob_git": "408cddc9157538e6babd03379fa09eefea6131e9fdd201c9e06e5777f5e95f92"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/FoodVisualStrategy.java",
+      "sha256_validado": "c8f432715b090c1a8c82763aa08f72be393fa0d65e5f3ce6489ea6885c0ab6e7",
+      "sha256_blob_git": "76c36bd9067a82b03b09480f730e720f710d7910d1bdcfb5ca9eb28ae9bd5f7b"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/HealthVisualStrategy.java",
+      "sha256_validado": "583cbb1475856c94af7f8d1fd105d4db624a3166cc376173eaacefd2d7d11eca",
+      "sha256_blob_git": "4a64a56830e351e3198a8cb8394864577168591d58f0140d5345ad832694c368"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/IncomeVisualStrategy.java",
+      "sha256_validado": "7adc883b12966d161868d07c1a66c64d4097c77ae939a69168f0e5d1306943f3",
+      "sha256_blob_git": "2af2ad699b26c92921bd82d4c0434b97d2e4b5b248ad070012079619431ced0f"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/NamedCategoryVisualStrategy.java",
+      "sha256_validado": "930cad4707241705dc134048743f5fcb82c77a297d337bac4dd5b1d1d5aef392",
+      "sha256_blob_git": "767c82cbbe745587b5c2f97d977025575e8e2c930442939237bd44f5013d418d"
+    },
+    {
+      "archivo": "app/src/main/java/com/example/finanzas/util/visuals/TransportVisualStrategy.java",
+      "sha256_validado": "2d78d277b44850c0b6b583ea41f4c4b8ce356345df5a2b9a2937d6c6b722db12",
+      "sha256_blob_git": "f239c2820860d58f7431b81c03e422e8440af11e0bb95e27ae52045bf14add89"
+    },
+    {
+      "archivo": "app/src/test/java/com/example/finanzas/AmountParserRegressionTest.java",
+      "sha256_validado": "bb9eb1c6fcf4c2f76899ba5e58029ce142c813c1ebf68649c1862461481e424e",
+      "sha256_blob_git": "e54c7566697c9490a2d5a1a1f6c34685861f9ec9e3975b45f04b0d59e7d899d9"
+    },
+    {
+      "archivo": "app/src/test/java/com/example/finanzas/TransactionValidatorUnitTest.java",
+      "sha256_validado": "e6ddce513ac07583f6513502da1f0affd14c2dac41bb37a23e03dcf7ee061e87",
+      "sha256_blob_git": "2faca0ca945a755ba4b077e98b9bc85d9a5c441e88162861d63c66252769fd6a"
+    },
+    {
+      "archivo": "app/src/test/java/com/example/finanzas/ui/BudgetFormRegressionTest.java",
+      "sha256_validado": "3020e260884f3c6cc5ccbf2ca0700296bfbaaf2eb2b88f69f03d1c33db96a2b1",
+      "sha256_blob_git": "d5767308bd38e18d26bc1e278057c60bb4c9ac7295a90dd4d739282ddf72d9a3"
+    },
+    {
+      "archivo": "app/src/test/java/com/example/finanzas/ui/TransactionFormConsumerTest.java",
+      "sha256_validado": "6ef117b0be88bd508844f76f447e93e16c30e167204e053fc680b3ea366a35bc",
+      "sha256_blob_git": "6550ed58ec1a169fb5c9d1476fc76dd49d18bb86e49cce59366100919f5d2081"
+    },
+    {
+      "archivo": "app/src/test/java/com/example/finanzas/util/CategoryVisualEquivalenceTest.java",
+      "sha256_validado": "239c14efa259f0db516c84f4213ed89275badeebadea3e2f1b03315ef0232ce0",
+      "sha256_blob_git": "d48ecfe648ca1f1f75fdc1cff5b68958cf56e7f5334ff002e0f4829e0d3b49ce"
+    },
+    {
+      "archivo": "app/src/test/java/com/example/finanzas/util/LegacyCategoryVisuals.java",
+      "sha256_validado": "935f2290f28674bdb64d44bd55ccf1cbe6b14626493a0c49a146cc3488cfae7d",
+      "sha256_blob_git": "9f7be82c112b4f12bf98c2938224fbcd3431a52ee61267926b2c76209941d2e7"
+    }
+  ]
+}

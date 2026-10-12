@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="com.example.finanzas.ExampleInstrumentedTest" tests="23" failures="1" errors="0" skipped="0" time="18.284" timestamp="2026-10-11T23:43:05">
+  <testcase name="useAppContext" classname="com.example.finanzas.ExampleInstrumentedTest" time="0.014"/>
+  <testcase name="initialBalanceTransactionsAreCreatedAndRepeatedConfigurationIsBlocked" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.046"/>
+  <testcase name="initialBalancesAreScopedByCurrentUser" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.351"/>
+  <testcase name="reminderListCalculatesRemainingDaysFromDueDate" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.728"/>
+  <testcase name="deleteCurrentUserFinancialDataDoesNotAffectOtherUsersAndAllowsInitialBalanceAgain" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.416"/>
+  <testcase name="multiUserRepositoryKeepsDataIsolated" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.291"/>
+  <testcase name="initialBalancesAndAccountTypedTransactionsBuildCurrentBalances" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.697"/>
+  <testcase name="explicitCurrenciesAreKeptForGoalsAndReminders" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.637"/>
+  <testcase name="markingRecurringReminderPaidAdvancesToNextOccurrence" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.666"/>
+  <testcase name="newlyCreatedCategoryCanBeUsedByTransactionWithCashAndTime" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.666"/>
+  <testcase name="processImportCreatesTransactionsForCurrentUser" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.325"/>
+  <testcase name="invalidTransactionDataIsRejected" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.703"/>
+  <testcase name="invalidImportRowsAreNotInserted" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.665"/>
+  <testcase name="insufficientBalanceValidationUsesInitialBalanceTransactions" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.696"/>
+  <testcase name="budgetCreateAndUpdateAreScopedToCurrentUser" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.355"/>
+  <testcase name="initialBalanceKeepsCurrencyAndRecalculatesWhenBaseCurrencyChanges" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.697"/>
+  <testcase name="addedCardInitialBalanceConvertsIntoCurrentBaseAndRecalculatesWhenBaseChanges" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.668"/>
+  <testcase name="insertAndListTransactions_filtersByUserId" classname="com.example.finanzas.data.local.room.RoomUserIsolationInstrumentedTest" time="0.005"/>
+  <testcase name="budgetsAreIndependentByUserId" classname="com.example.finanzas.data.local.room.RoomUserIsolationInstrumentedTest" time="0.032"/>
+  <testcase name="deleteTransaction_requiresMatchingUserId" classname="com.example.finanzas.data.local.room.RoomUserIsolationInstrumentedTest" time="0.006"/>
+  <testcase name="createEditListAndDeletePersistThroughAsyncAdapter" classname="com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest" time="0.747"/>
+  <testcase name="transferCreateEditDeletePreserveBalanceAndDestination" classname="com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest" time="0.717">
+    <failure>java.util.NoSuchElementException: Collection contains no element matching the predicate.
+at com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest$transferCreateEditDeletePreserveBalanceAndDestination$3.invokeSuspend(TransactionRepositoryInstrumentedTest.kt:134)
+at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-2f17ff152c47d2ea89eaa8c7c5536a9441eb97d4-59488:1)
+at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-2f17ff152c47d2ea89eaa8c7c5536a9441eb97d4-59489:1)
+at com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest.transferCreateEditDeletePreserveBalanceAndDestination(TransactionRepositoryInstrumentedTest.kt:111)
+</failure>
+  </testcase>
+  <testcase name="insufficientBalanceReturnsErrorWithoutCreatingTransfer" classname="com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest" time="0.698"/>
+</testsuite>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="com.example.finanzas.ExampleInstrumentedTest" tests="23" failures="0" errors="0" skipped="0" time="17.558" timestamp="2026-10-11T23:44:45">
+  <testcase name="useAppContext" classname="com.example.finanzas.ExampleInstrumentedTest" time="0.022"/>
+  <testcase name="initialBalanceTransactionsAreCreatedAndRepeatedConfigurationIsBlocked" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.068"/>
+  <testcase name="initialBalancesAreScopedByCurrentUser" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.228"/>
+  <testcase name="reminderListCalculatesRemainingDaysFromDueDate" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.667"/>
+  <testcase name="deleteCurrentUserFinancialDataDoesNotAffectOtherUsersAndAllowsInitialBalanceAgain" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.362"/>
+  <testcase name="multiUserRepositoryKeepsDataIsolated" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.3"/>
+  <testcase name="initialBalancesAndAccountTypedTransactionsBuildCurrentBalances" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.662"/>
+  <testcase name="explicitCurrenciesAreKeptForGoalsAndReminders" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.698"/>
+  <testcase name="markingRecurringReminderPaidAdvancesToNextOccurrence" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.669"/>
+  <testcase name="newlyCreatedCategoryCanBeUsedByTransactionWithCashAndTime" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.694"/>
+  <testcase name="processImportCreatesTransactionsForCurrentUser" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.296"/>
+  <testcase name="invalidTransactionDataIsRejected" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.698"/>
+  <testcase name="invalidImportRowsAreNotInserted" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.668"/>
+  <testcase name="insufficientBalanceValidationUsesInitialBalanceTransactions" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.668"/>
+  <testcase name="budgetCreateAndUpdateAreScopedToCurrentUser" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="1.237"/>
+  <testcase name="initialBalanceKeepsCurrencyAndRecalculatesWhenBaseCurrencyChanges" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.7"/>
+  <testcase name="addedCardInitialBalanceConvertsIntoCurrentBaseAndRecalculatesWhenBaseChanges" classname="com.example.finanzas.data.local.LocalRepositoryInstrumentedTest" time="0.725"/>
+  <testcase name="insertAndListTransactions_filtersByUserId" classname="com.example.finanzas.data.local.room.RoomUserIsolationInstrumentedTest" time="0.005"/>
+  <testcase name="budgetsAreIndependentByUserId" classname="com.example.finanzas.data.local.room.RoomUserIsolationInstrumentedTest" time="0.033"/>
+  <testcase name="deleteTransaction_requiresMatchingUserId" classname="com.example.finanzas.data.local.room.RoomUserIsolationInstrumentedTest" time="0.042"/>
+  <testcase name="createEditListAndDeletePersistThroughAsyncAdapter" classname="com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest" time="0.763"/>
+  <testcase name="transferCreateEditDeletePreserveBalanceAndDestination" classname="com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest" time="0.667"/>
+  <testcase name="insufficientBalanceReturnsErrorWithoutCreatingTransfer" classname="com.example.finanzas.data.repository.TransactionRepositoryInstrumentedTest" time="0.665"/>
+</testsuite>

@@ -1,0 +1,87 @@
+[
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.AmountParserRegressionTest.xml",
+    "sha256_original_privado": "74b7d44a9c760225ffd08ef20683d30fa7aaf3ce0527ecc1173e6078f82a4679",
+    "sha256_publicado": "5751733830b3a77076bddb296b92a1ce080a61e3154ba55c2186b8870e72e707"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.data.model.TransaccionTest.xml",
+    "sha256_original_privado": "8d85048754f609ad54b6cb7c5b70355dd5c15ee4f13095edd694880d58b34660",
+    "sha256_publicado": "2bd8d91e24940d5fc90cc1bb9ca0e2efa1b2a3c98169e301886240fa4cb033c8"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest.xml",
+    "sha256_original_privado": "de144c8ed8f405d262e7c76de2ade84e74b6cd3d9f412b6e1d9d54d6aef9e5c8",
+    "sha256_publicado": "ebf043e9d27d240e8cce82f35d90e90e9032850140f26816d2e90fd52a949aa1"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.ExampleUnitTest.xml",
+    "sha256_original_privado": "5c31ad89a6b401947200a5ba4b39b7463ca23f37c927751d5aa35b044f8f2d2c",
+    "sha256_publicado": "434da9e5bff619473b4326aa0e0286e95fec6bc6b405749b14f9693e91a0b027"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.TransactionValidatorUnitTest.xml",
+    "sha256_original_privado": "17962fae1add5553de2d8db5211189d86162aee36575c16605fa2c8c8cb94e53",
+    "sha256_publicado": "8984351009c6490b30f7cd42fbf622a7ddff2e33587a845d387486a56c8ee264"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.ui.BudgetFormRegressionTest.xml",
+    "sha256_original_privado": "5f694f3c3c844de5d9e25a30a3c99c711da15d5b06448647fe28b168168c809a",
+    "sha256_publicado": "423726d3968bcb46b7a0063228d388024f823b3352d50ab2534b5f3490eda79a"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.ui.TransactionFormConsumerTest.xml",
+    "sha256_original_privado": "94f2af9f2e8561eb4336e1cb1192a2203422ad3325da6fd1a312ec5fb7a3e518",
+    "sha256_publicado": "4bf5012a4cf3f8165c1712bb0dac14c1212aa402cc9199b60cbd81985f0a90eb"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.util.CategoryVisualEquivalenceTest.xml",
+    "sha256_original_privado": "5fe132e3aa4ecba13a1a50d7d7141fecdd15d5d57b65c223ddd1382bebe9d4a9",
+    "sha256_publicado": "ed0fa9dc530bb4cb29b77d02f93f3654f7ab7317c5ac4cd934450fc48bb6b7ae"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.util.CurrencyConverterTest.xml",
+    "sha256_original_privado": "d3ccdc0693f0e08136e2657726c84d24b3dbc4ab510d82b9b4ecb21d242b07eb",
+    "sha256_publicado": "e94cf58ee10b08e974d3566c9a354a84ae25b433687a21732b772ee9f951539e"
+  },
+  {
+    "archivo": "evidencias/unitarias/TEST-com.example.finanzas.util.RecurringTransactionStoreTest.xml",
+    "sha256_original_privado": "184550c7a9a731db323688b0ba1ad3d9e9ba34694f1fbad9b9351df39e38e5be",
+    "sha256_publicado": "c88e869e8670d78ad0d059128982451c351309b2f4e2837668e6e656848c6eb8"
+  },
+  {
+    "archivo": "evidencias/instrumentadas/TEST-SpendlyValidation(AVD) - 17-_app-.xml",
+    "sha256_original_privado": "eb9fc692e1250e846eb86d0db354e2dab2b955122fd871c06fabe408257cfb8b",
+    "sha256_publicado": "2988d9eadbf895ddb55dd94a034b9ba25d3d337b9ea3a9ba39b0c610f10581a3"
+  },
+  {
+    "archivo": "evidencias/instrumentadas-primer-intento/TEST-SpendlyValidation(AVD) - 17-_app-.xml",
+    "sha256_original_privado": "5792314ffd9e1d9bcad5e3b78e7aeb647b3b98090157d10b5247d7f8af6ad296",
+    "sha256_publicado": "649afbc20c8d3b46cd48dfd4e294abcd1edd3570353e22a9c2fe093c94e68ac7"
+  },
+  {
+    "archivo": "evidencias/build-inicial.log",
+    "sha256_original_privado": "02ead79cd43b77ec924a40ce099874afd5b2c7cbc78c9cf8a1c3ed0741b271a0",
+    "sha256_publicado": "cdedeb7cc7080466456b71dfca12ba866bb82899f0c716e4658db07a886afb4b"
+  },
+  {
+    "archivo": "evidencias/instrumentadas-compilacion.log",
+    "sha256_original_privado": "d1371b913c38960c9631275bda5e052895992a0398bd029c468b2fb0f1d38dda",
+    "sha256_publicado": "54725c1b1a0fb3d734edb8ac20cbd0b299e50bf8e63415e313349e5aef5a747e"
+  },
+  {
+    "archivo": "evidencias/instrumentadas-ejecucion.log",
+    "sha256_original_privado": "366acad40ef563a0b5239818f569f37b49192b314e05e28bd048b1db00719f75",
+    "sha256_publicado": "066782b74e086405a79c75cc5bfe66397d172e1cbcfb5b2b62f5b2e86b7c3a95"
+  },
+  {
+    "archivo": "evidencias/instrumentadas-final.log",
+    "sha256_original_privado": "cbece43f40fc1230b5ed5b3d8893cf2b660a7cb8cdbf87df450eb6378df9bb77",
+    "sha256_publicado": "fd60c0f0d77f196df2c046c10c3258a68955c19cd0fbd3bc3600a0015c92f30f"
+  },
+  {
+    "archivo": "evidencias/pruebas-regresion.log",
+    "sha256_original_privado": "73ce40199dfc0b84f019479fbecea55b15973ca4a9c4619b3b15bb41f1501305",
+    "sha256_publicado": "7610accf8ed7ce2594da957df28860e08393ed65abde9806fa04b33b11539643"
+  }
+]

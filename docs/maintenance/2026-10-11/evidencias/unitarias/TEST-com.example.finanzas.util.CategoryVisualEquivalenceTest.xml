@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="com.example.finanzas.util.CategoryVisualEquivalenceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-11T23:36:15.056Z" time="0.616">
+  <testcase name="registeredStrategyCanOverrideIconAndColorAndBeRemoved" classname="com.example.finanzas.util.CategoryVisualEquivalenceTest" time="0.038"/>
+  <testcase name="customizationOverridesRegistryAndInvalidColorFallsBack" classname="com.example.finanzas.util.CategoryVisualEquivalenceTest" time="0.105"/>
+  <testcase name="exactNamesKeywordsAndOverlappingRulesMatchOriginal" classname="com.example.finanzas.util.CategoryVisualEquivalenceTest" time="0.311"/>
+  <testcase name="categoryWithoutCustomizationRetainsOriginalDefaults" classname="com.example.finanzas.util.CategoryVisualEquivalenceTest" time="0.11"/>
+  <testcase name="nightThemeMatchesOriginal" classname="com.example.finanzas.util.CategoryVisualEquivalenceTest" time="0.05"/>
+  </testsuite>

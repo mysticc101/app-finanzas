@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="com.example.finanzas.data.model.TransaccionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-11T23:36:04.352Z" time="0.0">
+  <testcase name="displayNote_hidesRecurringMarkerInsideTransferNote" classname="com.example.finanzas.data.model.TransaccionTest" time="0.0"/>
+  <testcase name="displayNote_hidesRecurringMarkerForRegularTransaction" classname="com.example.finanzas.data.model.TransaccionTest" time="0.0"/>
+  <testcase name="transferDestination_readsStoredDestinationAccount" classname="com.example.finanzas.data.model.TransaccionTest" time="0.0"/>
+  </testsuite>

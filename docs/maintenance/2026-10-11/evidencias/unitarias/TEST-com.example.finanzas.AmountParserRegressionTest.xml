@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="com.example.finanzas.AmountParserRegressionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-11T23:36:04.316Z" time="0.008">
+  <testcase name="timeRulePreservesBoundariesWithoutAndroidViews" classname="com.example.finanzas.AmountParserRegressionTest" time="0.001"/>
+  <testcase name="negativePoliciesRemainDistinct" classname="com.example.finanzas.AmountParserRegressionTest" time="0.001"/>
+  <testcase name="validatorRejectsNonFiniteAmounts" classname="com.example.finanzas.AmountParserRegressionTest" time="0.002"/>
+  <testcase name="malformedBudgetNumberThrowsInsteadOfBecomingZero" classname="com.example.finanzas.AmountParserRegressionTest" time="0.001"/>
+  <testcase name="overflowCannotReachPersistenceAsInfinity" classname="com.example.finanzas.AmountParserRegressionTest" time="0.001"/>
+  <testcase name="strictParserPreservesOriginalEmptyAndSeparatorPolicy" classname="com.example.finanzas.AmountParserRegressionTest" time="0.001"/>
+  </testsuite>
