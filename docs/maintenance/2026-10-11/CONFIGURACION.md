@@ -20,8 +20,8 @@ Los números del catálogo no se consideran automáticamente dependencias efecti
 
 Identificación mediante ruta, ID del elemento y hash de commit. Las RFC describen impacto, riesgo y criterio de aceptación. La selección explícita de archivos evita incorporar configuración privada y artefactos generados. Antes de publicar se revisan el diff, las pruebas disponibles y su correspondencia con las fuentes. La consulta al remoto confirma el hash publicado y los issues registran el cierre.
 
-La configuración de referencia agrupa código, build y pruebas coherentes. No se crea un tag ni una release para simular una entrega; versionName/versionCode son datos de la aplicación y no sustituyen al hash de Git. Las ramas y PR ajenas a este paquete conservan su estado.
+La configuración de referencia reúne el código, los archivos de compilación y las pruebas que se validaron juntos. El identificador del commit permite recuperar ese conjunto. Los valores versionName/versionCode identifican la versión declarada de Android, mientras que una etiqueta de Git marca una revisión del repositorio. Este mantenimiento se identifica mediante commits y no tiene una release asociada.
 
 ## Distribución
 
-Este directorio contiene documentación técnica apropiada para el repositorio público. Los informes académicos, materiales docentes, copias de respaldo, bases de datos de usuarios y registros sin depurar se custodian fuera de esta publicación. El repositorio público no se utiliza como almacén de esos documentos.
+El repositorio distribuye el código, su configuración de compilación, las pruebas y la documentación técnica. Las bases de datos de usuarios, las credenciales, las claves de firma y los archivos de configuración privada permanecen fuera de Git. Las evidencias publicadas omiten datos personales del equipo utilizado para las pruebas.
