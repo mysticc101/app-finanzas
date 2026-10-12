@@ -35,6 +35,7 @@ import com.example.finanzas.data.model.CategoryBudgetInput;
 import com.example.finanzas.ui.adapter.CategoryBudgetEditAdapter;
 import com.example.finanzas.ui.view.SpendlyDecorBackgroundDrawable;
 import com.example.finanzas.ui.viewmodel.BudgetViewModel;
+import com.example.finanzas.util.AmountParser;
 import com.example.finanzas.util.CategoryVisuals;
 import com.example.finanzas.util.MicroAnimations;
 import com.example.finanzas.util.PerfLogger;
@@ -468,27 +469,7 @@ public class PresupuestoFragment extends androidx.fragment.app.Fragment {
     }
 
     private double parseMontoSeguro(String raw) {
-        if (raw == null) return 0;
-        String limpio = raw.trim();
-        if (limpio.isEmpty()) return 0;
-        limpio = limpio.replaceAll("[^0-9,.-]", "");
-        if (limpio.isEmpty()) return 0;
-        int lastComma = limpio.lastIndexOf(',');
-        int lastDot = limpio.lastIndexOf('.');
-        if (lastComma >= 0 && lastDot >= 0) {
-            if (lastComma > lastDot) {
-                limpio = limpio.replace(".", "");
-                limpio = limpio.replace(',', '.');
-            } else {
-                limpio = limpio.replace(",", "");
-            }
-        } else if (lastComma >= 0) {
-            limpio = limpio.replace(',', '.');
-        }
-        if ("-".equals(limpio) || ".".equals(limpio) || "-.".equals(limpio) || ",".equals(limpio)) {
-            return 0;
-        }
-        return Double.parseDouble(limpio);
+        return AmountParser.parseAmountOrThrow(raw);
     }
 
     private String moneyNumber(double amount) {

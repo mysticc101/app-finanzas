@@ -43,6 +43,7 @@ import com.example.finanzas.data.model.HomeSummary;
 import com.example.finanzas.data.model.Transaccion;
 import com.example.finanzas.ui.view.SpendlyDecorBackgroundDrawable;
 import com.example.finanzas.ui.viewmodel.HomeViewModel;
+import com.example.finanzas.util.AmountParser;
 import com.example.finanzas.util.CategoryPrefs;
 import com.example.finanzas.util.CategoryVisuals;
 import com.example.finanzas.util.Format;
@@ -1186,21 +1187,7 @@ public class HomeFragment extends Fragment {
     }
 
     private double parseAmount(@Nullable String raw) {
-        if (raw == null) return 0.0;
-        String clean = raw.trim().replaceAll("[^0-9,.-]", "");
-        if (clean.isEmpty()) return 0.0;
-        int lastComma = clean.lastIndexOf(',');
-        int lastDot = clean.lastIndexOf('.');
-        if (lastComma >= 0 && lastDot >= 0) {
-            clean = lastComma > lastDot ? clean.replace(".", "").replace(',', '.') : clean.replace(",", "");
-        } else if (lastComma >= 0) {
-            clean = clean.replace(',', '.');
-        }
-        try {
-            return Math.max(0.0, Double.parseDouble(clean));
-        } catch (NumberFormatException e) {
-            return 0.0;
-        }
+        return Math.max(0.0, AmountParser.parseAmount(raw));
     }
 
     private String formatTime(@Nullable Date date) {

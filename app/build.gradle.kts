@@ -51,6 +51,10 @@ android {
         compose = true
     }
 
+    testOptions {
+        unitTests.isIncludeAndroidResources = true
+    }
+
     applicationVariants.all {
         outputs.all {
             (this as BaseVariantOutputImpl).outputFileName = "Spendly-$name.apk"
@@ -103,6 +107,7 @@ dependencies {
     implementation("com.loopj.android:android-async-http:1.4.11")
 
     testImplementation("junit:junit:4.13.2")
+    testImplementation("org.robolectric:robolectric:4.16.1")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     baselineProfile(project(":macrobenchmark"))

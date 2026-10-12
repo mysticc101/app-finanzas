@@ -40,7 +40,10 @@ import com.example.finanzas.R;
 import com.example.finanzas.data.api.CategoryStore;
 import com.example.finanzas.data.api.AccountService;
 import com.example.finanzas.data.api.SettingsService;
-import com.example.finanzas.data.api.TransService;
+import com.example.finanzas.data.repository.ITransactionRepository;
+import com.example.finanzas.data.repository.TransactionRepository;
+import com.example.finanzas.util.AmountParser;
+import com.example.finanzas.util.TransactionFormValidator;
 import com.example.finanzas.data.model.Categoria;
 import com.example.finanzas.data.model.FinancialAccount;
 import com.example.finanzas.data.model.Transaccion;
@@ -138,6 +141,18 @@ public class NuevaTransaccionFragment extends Fragment {
     private String selectedLabelId = null;
     private List<TransactionLabelStore.Label> transactionLabels = new ArrayList<>();
     private final Map<Integer, Integer> recurrenceDayByChipId = new HashMap<>();
+    private ITransactionRepository transactionRepository;
+
+    public void setTransactionRepository(ITransactionRepository repository) {
+        this.transactionRepository = repository;
+    }
+
+    public ITransactionRepository getRepository() {
+        if (transactionRepository == null && getContext() != null) {
+            transactionRepository = new TransactionRepository(requireContext());
+        }
+        return transactionRepository;
+    }
 
     @Nullable
     @Override
@@ -1302,7 +1317,7 @@ public class NuevaTransaccionFragment extends Fragment {
 
     private void loadCategoryUsageCounts() {
         Calendar cal = Calendar.getInstance();
-        TransService.list(requireContext(), cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, new TransService.ListCb() {
+        getRepository().list(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, null, new ITransactionRepository.ListCb() {
             @Override public void onOk(List<? extends Transaccion> res) {
                 categoryUseCounts.clear();
                 if (res != null) {
@@ -1788,29 +1803,18 @@ public class NuevaTransaccionFragment extends Fragment {
     }
 
     private void onGuardar(View view) {
+        clearValidationErrors();
         String sMonto = etMonto.getText() == null ? "" : etMonto.getText().toString().trim();
         if (sMonto.isEmpty()) {
             setMontoError(getString(R.string.error_ingresa_monto));
             return;
         }
 
-        setMontoError(null);
         String sFecha = etFecha != null && etFecha.getText() != null
                 ? etFecha.getText().toString().trim() : "";
         Date fechaSeleccionada = parseFechaSegura(sFecha);
-        if (fechaSeleccionada == null) {
-            tilFecha.setError(getString(R.string.error_formato_fecha));
-            return;
-        }
-        tilFecha.setError(null);
         String sHora = etHora != null && etHora.getText() != null
                 ? etHora.getText().toString().trim() : "";
-        if (!UiFormUtils.isValidTime(sHora)) {
-            tilHora.setError(getString(R.string.transaction_time_error));
-            return;
-        }
-        tilHora.setError(null);
-        final long fechaMs = combineDateAndTime(fechaSeleccionada, sHora);
 
         final boolean transferLocal = isTransferSelected();
         String nombreSel = actCategoria.getText() == null ? "" : actCategoria.getText().toString().trim();
@@ -1820,42 +1824,37 @@ public class NuevaTransaccionFragment extends Fragment {
                 if (c != null && c.nombre != null && c.nombre.equals(nombreSel)) { seleccionada = c; break; }
             }
         }
-        if (!transferLocal && seleccionada == null) {
-            tilCategoria.setError(getString(R.string.error_selecciona_categoria));
-            actCategoria.requestFocus();
-            showCategoryPickerSheet();
-            return;
-        }
 
-        tilCategoria.setError(null);
         final String monedaLocal = resolveSelectedCurrency();
-        if (!CurrencyConverter.supportedCurrencies().contains(monedaLocal)) {
-            tilMoneda.setError(getString(R.string.transaction_currency_error));
-            return;
-        }
-        tilMoneda.setError(null);
-        final double montoLocal = Math.abs(parseMontoSeguro(sMonto));
-        if (montoLocal <= 0) {
-            setMontoError(getString(R.string.error_monto_invalido));
-            return;
-        }
-
-        setMontoError(null);
+        final double montoLocal = AmountParser.parsePositiveAmount(sMonto);
         final boolean esIngresoLocal = isIncomeSelected();
         final String accountTypeLocal = resolveSelectedAccountType();
         final String destinationTypeLocal = SettingsService.normalizeAccountType(selectedDestinationAccountType);
-        if (transferLocal && accountTypeLocal.equals(destinationTypeLocal)) {
-            UiFormUtils.showMessage(requireView(), R.string.transfer_same_account_error);
-            return;
-        }
-        final String notaLocal = etNota.getText() == null ? "" : etNota.getText().toString().trim();
         final String recurrenceLocal = resolveRecurrenceCode();
         final int recurrenceDaysMaskLocal = selectedCustomRecurrenceDaysMask();
-        if (RecurringTransactionStore.FREQUENCY_CUSTOM.equals(recurrenceLocal) && recurrenceDaysMaskLocal == 0) {
-            UiFormUtils.showMessage(requireView(), R.string.transaction_recurrence_custom_error);
-            setMoreOptionsExpanded(true);
+
+        // Validación delegada conforme al Principio de Responsabilidad Única (SRP)
+        TransactionFormValidator.ValidationResult validation = TransactionFormValidator.validate(
+                fechaSeleccionada,
+                sHora,
+                transferLocal,
+                seleccionada != null,
+                monedaLocal,
+                CurrencyConverter.supportedCurrencies(),
+                montoLocal,
+                accountTypeLocal,
+                destinationTypeLocal,
+                recurrenceLocal,
+                recurrenceDaysMaskLocal
+        );
+
+        if (!validation.isValid()) {
+            applyValidationResult(validation);
             return;
         }
+
+        final long fechaMs = combineDateAndTime(fechaSeleccionada, sHora);
+        final String notaLocal = etNota.getText() == null ? "" : etNota.getText().toString().trim();
         final Categoria catSel = seleccionada;
         final Integer editingIdLocal = editingId;
 
@@ -1865,8 +1864,8 @@ public class NuevaTransaccionFragment extends Fragment {
         if (transferLocal) {
             if (editingIdLocal != null && editingIdLocal > 0) {
                 final String transferNoteLocal = buildTransferDisplayNote(accountTypeLocal, destinationTypeLocal, notaLocal);
-                TransService.updateTransfer(requireContext(), editingIdLocal, accountTypeLocal, destinationTypeLocal, montoLocal, transferNoteLocal, fechaMs, monedaLocal,
-                        new TransService.VoidCb() {
+                getRepository().updateTransfer(editingIdLocal, accountTypeLocal, destinationTypeLocal, montoLocal, transferNoteLocal, fechaMs, monedaLocal,
+                        new ITransactionRepository.VoidCb() {
                             @Override public void onOk() {
                                 persistOptionalLabel(editingIdLocal);
                                 persistOptionalRecurrence(editingIdLocal, true, accountTypeLocal, destinationTypeLocal, montoLocal, transferNoteLocal, fechaMs, monedaLocal, recurrenceLocal, recurrenceDaysMaskLocal);
@@ -1884,8 +1883,8 @@ public class NuevaTransaccionFragment extends Fragment {
                 return;
             }
             final String transferNoteLocal = buildTransferDisplayNote(accountTypeLocal, destinationTypeLocal, notaLocal);
-            TransService.createTransfer(requireContext(), accountTypeLocal, destinationTypeLocal, montoLocal, transferNoteLocal, fechaMs, monedaLocal,
-                    new TransService.SimpleCb() {
+            getRepository().createTransfer(accountTypeLocal, destinationTypeLocal, montoLocal, transferNoteLocal, fechaMs, monedaLocal,
+                    new ITransactionRepository.SimpleCb() {
                         @Override public void onOk(int newId) {
                             persistOptionalLabel(newId);
                             persistOptionalRecurrence(newId, true, accountTypeLocal, destinationTypeLocal, montoLocal, transferNoteLocal, fechaMs, monedaLocal, recurrenceLocal, recurrenceDaysMaskLocal);
@@ -1902,8 +1901,8 @@ public class NuevaTransaccionFragment extends Fragment {
                     });
 
         } else if (editingIdLocal == null || editingIdLocal < 0) {
-            TransService.create(requireContext(), catSel.id, esIngresoLocal, montoLocal, notaLocal, fechaMs, monedaLocal, accountTypeLocal,
-                    new TransService.SimpleCb() {
+            getRepository().create(catSel.id, esIngresoLocal, montoLocal, notaLocal, fechaMs, monedaLocal, accountTypeLocal,
+                    new ITransactionRepository.SimpleCb() {
                         @Override public void onOk(int newId) {
                             persistOptionalLabel(newId);
                             persistOptionalRecurrence(newId, false, accountTypeLocal, null, montoLocal, notaLocal, fechaMs, monedaLocal, recurrenceLocal, recurrenceDaysMaskLocal);
@@ -1924,8 +1923,8 @@ public class NuevaTransaccionFragment extends Fragment {
                     });
 
         } else {
-            TransService.update(requireContext(), editingIdLocal, catSel.id, esIngresoLocal, montoLocal, notaLocal, fechaMs, monedaLocal, accountTypeLocal,
-                    new TransService.VoidCb() {
+            getRepository().update(editingIdLocal, catSel.id, esIngresoLocal, montoLocal, notaLocal, fechaMs, monedaLocal, accountTypeLocal,
+                    new ITransactionRepository.VoidCb() {
                         @Override public void onOk() {
                             persistOptionalLabel(editingIdLocal);
                             persistOptionalRecurrence(editingIdLocal, false, accountTypeLocal, null, montoLocal, notaLocal, fechaMs, monedaLocal, recurrenceLocal, recurrenceDaysMaskLocal);
@@ -1995,34 +1994,46 @@ public class NuevaTransaccionFragment extends Fragment {
     }
 
     private double parseMontoSeguro(String raw) {
-        if (raw == null) return 0;
-        String limpio = raw.trim();
-        if (limpio.isEmpty()) return 0;
-        limpio = limpio.replaceAll("[^0-9,.-]", "");
-        if (limpio.isEmpty()) return 0;
+        return AmountParser.parseAmount(raw);
+    }
 
-        int lastComma = limpio.lastIndexOf(',');
-        int lastDot = limpio.lastIndexOf('.');
-        if (lastComma >= 0 && lastDot >= 0) {
-            if (lastComma > lastDot) {
-                limpio = limpio.replace(".", "");
-                limpio = limpio.replace(',', '.');
-            } else {
-                limpio = limpio.replace(",", "");
-            }
-        } else if (lastComma >= 0) {
-            limpio = limpio.replace(',', '.');
+    private void applyValidationResult(TransactionFormValidator.ValidationResult result) {
+        switch (result.getStatus()) {
+            case INVALID_DATE:
+                tilFecha.setError(getString(R.string.error_formato_fecha));
+                break;
+            case INVALID_TIME:
+                tilHora.setError(getString(R.string.transaction_time_error));
+                break;
+            case MISSING_CATEGORY:
+                tilCategoria.setError(getString(R.string.error_selecciona_categoria));
+                actCategoria.requestFocus();
+                showCategoryPickerSheet();
+                break;
+            case INVALID_CURRENCY:
+                tilMoneda.setError(getString(R.string.transaction_currency_error));
+                break;
+            case INVALID_AMOUNT:
+                setMontoError(getString(R.string.error_monto_invalido));
+                break;
+            case SAME_TRANSFER_ACCOUNT:
+                UiFormUtils.showMessage(requireView(), R.string.transfer_same_account_error);
+                break;
+            case INVALID_RECURRENCE_CUSTOM:
+                UiFormUtils.showMessage(requireView(), R.string.transaction_recurrence_custom_error);
+                setMoreOptionsExpanded(true);
+                break;
+            default:
+                break;
         }
+    }
 
-        if ("-".equals(limpio) || ".".equals(limpio) || "-.".equals(limpio) || ",".equals(limpio)) {
-            return 0;
-        }
-
-        try {
-            return Double.parseDouble(limpio);
-        } catch (NumberFormatException e) {
-            return 0;
-        }
+    private void clearValidationErrors() {
+        tilFecha.setError(null);
+        tilHora.setError(null);
+        tilCategoria.setError(null);
+        tilMoneda.setError(null);
+        setMontoError(null);
     }
 
     private void finishAfterCreate() {
@@ -2047,7 +2058,7 @@ public class NuevaTransaccionFragment extends Fragment {
         final int id = editingId;
         if (btnDelete != null) btnDelete.setEnabled(false);
         UiFormUtils.setActionLoading(btnGuardar, true);
-        TransService.delete(requireContext(), id, new TransService.VoidCb() {
+        getRepository().delete(id, new ITransactionRepository.VoidCb() {
             @Override public void onOk() {
                 savedSuccessfully = true;
                 UiFormUtils.setActionLoading(btnGuardar, false);

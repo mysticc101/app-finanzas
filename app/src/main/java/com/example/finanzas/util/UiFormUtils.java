@@ -125,15 +125,7 @@ public final class UiFormUtils {
     }
 
     public static boolean isValidTime(@Nullable String raw) {
-        if (raw == null || !raw.matches("^\\d{2}:\\d{2}$")) return false;
-        try {
-            String[] parts = raw.split(":");
-            int hour = Integer.parseInt(parts[0]);
-            int minute = Integer.parseInt(parts[1]);
-            return hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59;
-        } catch (Exception e) {
-            return false;
-        }
+        return TimeValidator.isValidTime(raw);
     }
 
     public static void clearErrors(@NonNull EditText... fields) {
