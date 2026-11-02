@@ -1,12 +1,19 @@
 Prueba manual de registro y edición de gastos
 
-Responsable: Jhostyn Rafael Morales Figueroa
-Fecha de la prueba: 01/11/2026
-Modelo del celular: Redmi Note 14
-Saldo inicial observado: S/ 100.00 en efectivo.
-Saldo después del gasto de S/ 20: S/ 80.00.
-Saldo después de editarlo a S/ 25: S/ 75.00.
-Cantidad de gastos con la nota «Prueba Jhostyn»: 1.
+Responsable: 
+Jhostyn Rafael Morales Figueroa
+Fecha de la prueba: 
+01/11/2026
+Modelo del celular: 
+Redmi Note 14
+Saldo inicial observado: 
+S/ 100.00 en efectivo.
+Saldo después del gasto de S/ 20: 
+S/ 80.00.
+Saldo después de editarlo a S/ 25: 
+S/ 75.00.
+Cantidad de gastos con la nota «Prueba Jhostyn»: 
+1.
 
 Pasos realizados:
 1. Ingresé a la aplicación en modo invitado.
