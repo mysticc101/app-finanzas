@@ -4,7 +4,7 @@
 
 Comprobar que, al introducir un presupuesto de `-50` y guardarlo, el formulario envía `0` a la operación de guardado `saveBudget`.
 
-La prueba `negativeBudgetSavesAsZero` intercepta esa llamada con Robolectric y comprueba que se realiza una sola vez con importe cero. No verifica una escritura real en Firebase.
+La prueba `negativeBudgetSavesAsZero` intercepta esa llamada con Robolectric y comprueba que se realiza una sola vez con importe cero. No verifica una escritura real en la base de datos ni una sincronización con Firebase.
 
 ## Preparación
 
@@ -79,7 +79,7 @@ Jhon (`Jhon-001`) confirmó que siguió todos los pasos sin problemas. Indicó q
 - [Captura de la terminal](https://github.com/user-attachments/assets/edbae74e-b57a-4747-891f-910816835905).
 - [Captura del informe de pruebas](https://github.com/user-attachments/assets/de8964a8-7c81-4a2e-ba21-3704c383ee2e).
 
-El resultado aportado por Jhon confirma que la prueba del formulario para el presupuesto de `-50` pasó: la operación de guardado recibe `0`. El alcance es la llamada interceptada por la prueba unitaria, no una escritura real en Firebase.
+El resultado aportado por Jhon confirma que la prueba del formulario para el presupuesto de `-50` pasó: la operación de guardado recibe `0`. El alcance es la llamada interceptada por la prueba unitaria, no una escritura real en la base de datos ni una sincronización con Firebase.
 
 Antes de su revisión se habían aclarado la terminal de Windows, la ubicación de la raíz del proyecto, el método que debe aparecer en el informe y cómo obtener una ejecución nueva si se reutilizan resultados. Jhon confirmó que pudo seguir la guía tal como estaba.
 

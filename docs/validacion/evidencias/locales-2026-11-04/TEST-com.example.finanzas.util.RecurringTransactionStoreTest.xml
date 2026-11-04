@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.finanzas.util.RecurringTransactionStoreTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-04T22:11:03.135Z" hostname="PC-ALE" time="0.036">
+  <properties/>
+  <testcase name="weeklyFrequencyMatchesOriginalWeekdayOnly" classname="com.example.finanzas.util.RecurringTransactionStoreTest" time="0.034"/>
+  <testcase name="customFrequencyWithoutSelectedDaysDoesNotMatch" classname="com.example.finanzas.util.RecurringTransactionStoreTest" time="0.001"/>
+  <testcase name="monthlyFrequencyUsesLastDayWhenMonthIsShorter" classname="com.example.finanzas.util.RecurringTransactionStoreTest" time="0.0"/>
+  <testcase name="negativeSourceTransactionIdMeansStandaloneRule" classname="com.example.finanzas.util.RecurringTransactionStoreTest" time="0.0"/>
+  <testcase name="customFrequencyMatchesOnlySelectedWeekdays" classname="com.example.finanzas.util.RecurringTransactionStoreTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

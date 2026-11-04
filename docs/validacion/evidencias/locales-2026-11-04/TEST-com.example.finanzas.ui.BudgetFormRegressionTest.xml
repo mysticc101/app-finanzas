@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.finanzas.ui.BudgetFormRegressionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-04T22:11:03.748Z" hostname="PC-ALE" time="5.257">
+  <properties/>
+  <testcase name="negativeBudgetSavesAsZero" classname="com.example.finanzas.ui.BudgetFormRegressionTest" time="3.754"/>
+  <testcase name="fragmentParserPreservesNegativeSignForBudgetClamp" classname="com.example.finanzas.ui.BudgetFormRegressionTest" time="0.733"/>
+  <testcase name="malformedInputStopsBeforeViewModelSave" classname="com.example.finanzas.ui.BudgetFormRegressionTest" time="0.734"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
