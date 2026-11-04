@@ -59,21 +59,28 @@ Si falla la preparación o la compilación, registrar el error: ese bloqueo no d
 
 ## Revisión de la guía con Jhon
 
-**Estado: pendiente de confirmación y evidencia de Jhon.**
+**Estado: validación confirmada por Jhon el 4 de noviembre de 2026.**
 
-Solicitar a Jhon que siga esta guía al ejecutar la prueba y confirme:
-- Si faltó algún paso o alguna instrucción resultó confusa.
-- El commit exacto que probó.
-- El resultado de Gradle y de `negativeBudgetSavesAsZero`.
-- La evidencia de la terminal y del informe, sin incluir configuración privada.
+Jhon (`Jhon-001`) confirmó que siguió todos los pasos sin problemas. Indicó que las instrucciones para la terminal de Windows y la ruta del informe HTML son claras, y que no encontró pasos faltantes ni instrucciones confusas.
 
-| Registro | Estado |
+| Registro | Resultado |
 | --- | --- |
-| Resultado confirmado por Jhon | Pendiente |
-| Evidencia de ejecución | Pendiente |
-| Pasos faltantes o confusos indicados por Jhon | Pendiente |
-| Correcciones realizadas tras su revisión | Pendiente |
+| Ejecutor de la prueba | Jhon (`Jhon-001`) |
+| Commit probado, confirmado por Jhon | [5630cd9](https://github.com/mysticc101/app-finanzas/commit/5630cd9851cbcc6155cfb2fcb853a2c9ee31b545) |
+| Resultado de Gradle | `BUILD SUCCESSFUL`, según su confirmación y captura de la terminal |
+| Prueba del presupuesto negativo | `negativeBudgetSavesAsZero` aprobada |
+| Informe aportado | 3 pruebas, 0 fallos, 0 omitidas; 100 % satisfactorio |
+| Pasos faltantes o confusos | Ninguno, según Jhon |
+| Correcciones tras su revisión | No fueron necesarias correcciones de las instrucciones; se completó este registro con su confirmación y evidencia |
 
-En esta versión se aclararon la terminal de Windows, la ubicación de la raíz del proyecto, el método que debe aparecer en el informe y cómo obtener una ejecución nueva si se reutilizan resultados. Estas aclaraciones proceden de la revisión del código y de la guía; todavía no de comentarios de Jhon.
+### Evidencia
 
-La preparación y revisión de este documento no implica haber ejecutado la prueba. Completar el resultado y las correcciones únicamente cuando Jhon aporte su confirmación y evidencia.
+- [Comentario de Jhon con su confirmación y las capturas](https://github.com/mysticc101/app-finanzas/issues/14#issuecomment-6634877605).
+- [Captura de la terminal](https://github.com/user-attachments/assets/edbae74e-b57a-4747-891f-910816835905).
+- [Captura del informe de pruebas](https://github.com/user-attachments/assets/de8964a8-7c81-4a2e-ba21-3704c383ee2e).
+
+El resultado aportado por Jhon confirma que la prueba del formulario para el presupuesto de `-50` pasó: la operación de guardado recibe `0`. El alcance es la llamada interceptada por la prueba unitaria, no una escritura real en Firebase.
+
+Antes de su revisión se habían aclarado la terminal de Windows, la ubicación de la raíz del proyecto, el método que debe aparecer en el informe y cómo obtener una ejecución nueva si se reutilizan resultados. Jhon confirmó que pudo seguir la guía tal como estaba.
+
+La ejecución fue realizada por Jhon. La preparación y actualización de esta guía se basan en la revisión del código, su confirmación y la evidencia aportada; no constituyen una ejecución propia de la prueba.
