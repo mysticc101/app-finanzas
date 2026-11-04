@@ -1,0 +1,21 @@
+{
+  "compilacion-locales-2026-11-04.log": "42faa65d3e8b06f8bde5836eaacca5f3ee37336942c702a44568f5a894aa54d1",
+  "fuentes-validadas-2026-11-04.json": "e71ffa1181aa9532c594fbb61eaeccf1d6e5a985c653dc0d44c15a0b8114fca0",
+  "resultados-2026-11-04.json": "16a5fabd90c3c2ddd886f8d0e21e4a6aa5272d2c54aaf807ba5a1d8f4a84d5a1",
+  "dennis/01-configuracion-saldos-iniciales.png": "28ba4f713c9829cfc4a732982a4beef16bf7a5d4c10daa5fc9340ed0f49282f6",
+  "dennis/02-formulario-transferencia-10.png": "84ffe563cf56f46a8ffe7b82c0f35612a162b1622eba901ac1fa44a2e6961095",
+  "dennis/03-resultado-efectivo-90-tarjeta-10.png": "57c72e10573d0db2c45741d78a955b615d3ed69feb4e9796e1aec1a212040605",
+  "jhostyn/01-saldo-inicial-100.png": "5765e8d075fa1c75b9e3c08f36e59e0501759767d74ed8517ca49e79cf79c106",
+  "jhostyn/02-gasto-20-saldo-80.png": "0fb1d41494a37333ba52082554a567d4d921b68563a08530c1243f8cd3a1fb26",
+  "jhostyn/03-edicion-25-saldo-75.png": "3fa8d236b1892a26de48c7f04271f84f7b97ed18f6e723e31d37253a8ee0cc9d",
+  "locales-2026-11-04/TEST-com.example.finanzas.AmountParserRegressionTest.xml": "773407e46d95d62f9411170a33c6d1c773e2e03e9eafd75939b4c7ee7dedc73d",
+  "locales-2026-11-04/TEST-com.example.finanzas.data.model.TransaccionTest.xml": "9c5bc4223099a62786b6748500336f5dc7606d9f52524935d0594a56f81fa7c4",
+  "locales-2026-11-04/TEST-com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest.xml": "1ed003d21fcc4d761a9ab9bf7dac05acb8359ff7788595e64055f374250c0cdd",
+  "locales-2026-11-04/TEST-com.example.finanzas.ExampleUnitTest.xml": "235df766e6ce91669f020f88c4d8a9f7d3461e23bf88a39138259d82fcb93036",
+  "locales-2026-11-04/TEST-com.example.finanzas.TransactionValidatorUnitTest.xml": "2c2d681988cd0720d91dd7e7ccb058edd49393ddb22606f3ead7fafda65ad9e7",
+  "locales-2026-11-04/TEST-com.example.finanzas.ui.BudgetFormRegressionTest.xml": "577981eb0e9b9036019b09a5e760c09a097fabe358652b197a04dae575b011d5",
+  "locales-2026-11-04/TEST-com.example.finanzas.ui.TransactionFormConsumerTest.xml": "33893bd266e9acbb2e08aa03192ca16921efe5e83c33a20bd78fa643621148d7",
+  "locales-2026-11-04/TEST-com.example.finanzas.util.CategoryVisualEquivalenceTest.xml": "f36e6b4cf7379baf0922b2c86e0bed27a15b5d78f8e0074f579669452b030162",
+  "locales-2026-11-04/TEST-com.example.finanzas.util.CurrencyConverterTest.xml": "de643653a567b7cbb02ce8ec12b81b0d2c9302d18a9325904757a4ee11c0d5d9",
+  "locales-2026-11-04/TEST-com.example.finanzas.util.RecurringTransactionStoreTest.xml": "c979f95e110acbaf9fa0542bb0c77994b970ce5acfa4db0a6a1363c033a05a58"
+}

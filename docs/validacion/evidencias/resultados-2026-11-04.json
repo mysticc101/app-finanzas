@@ -1,0 +1,114 @@
+{
+  "fecha": "2026-11-04",
+  "commit_ejecutado": "f6416f6d6c9b286e8d78e137460bf72e209f84d2",
+  "comando": ".\\gradlew.bat :app:assembleDebug :app:testDebugUnitTest :app:assembleDebugAndroidTest --console=plain",
+  "locales": {
+    "tests": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": [
+    {
+      "name": "com.example.finanzas.AmountParserRegressionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.173Z",
+      "time": "0.004"
+    },
+    {
+      "name": "com.example.finanzas.data.model.TransaccionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.195Z",
+      "time": "0.001"
+    },
+    {
+      "name": "com.example.finanzas.domain.usecase.FinancialAnalysisRulesTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.089Z",
+      "time": "0.039"
+    },
+    {
+      "name": "com.example.finanzas.ExampleUnitTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.178Z",
+      "time": "0.0"
+    },
+    {
+      "name": "com.example.finanzas.TransactionValidatorUnitTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.181Z",
+      "time": "0.013"
+    },
+    {
+      "name": "com.example.finanzas.ui.BudgetFormRegressionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.748Z",
+      "time": "5.257"
+    },
+    {
+      "name": "com.example.finanzas.ui.TransactionFormConsumerTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:09.044Z",
+      "time": "1.931"
+    },
+    {
+      "name": "com.example.finanzas.util.CategoryVisualEquivalenceTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:10.987Z",
+      "time": "0.323"
+    },
+    {
+      "name": "com.example.finanzas.util.CurrencyConverterTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.130Z",
+      "time": "0.003"
+    },
+    {
+      "name": "com.example.finanzas.util.RecurringTransactionStoreTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-04T22:11:03.135Z",
+      "time": "0.036"
+    }
+  ],
+  "instrumentadas": {
+    "ejecutadas_en_esta_revision": false,
+    "referencia_historica": "docs/maintenance/2026-10-11/evidencias/instrumentadas/",
+    "aprobadas_el_2026_10_11": 23
+  },
+  "apk": {
+    "versionName": "1.0.0",
+    "versionCode": 7,
+    "sha256": "b196873cb4da04e3956085ef18ed782218cdbe27f6c690c21b5a7bbe0e388bb5",
+    "bytes": 25158263
+  }
+}
